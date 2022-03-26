@@ -2,7 +2,7 @@
 // @name         原神自动答题
 // @namespace    http://tampermonkey.net/
 // @version      1.1.2
-// @description  派蒙的十万个为什么自动答题，题库不是很全，能答一半多，但可以从用户的正确答案中获取，请兄弟们多用用，以后就不用自己答啦！
+// @description  派蒙的十万个为什么——自动答题
 // @author       0xCaner
 // @match        https://webstatic.mihoyo.com/ys/event/answer-question/index.html*
 // @icon         https://ys.mihoyo.com/main/favicon.ico
