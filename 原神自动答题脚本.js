@@ -1,12 +1,13 @@
 // ==UserScript==
-// @name         派蒙的十万个为什么(自动答题)
+// @name         原神自动答题
 // @namespace    http://tampermonkey.net/
-// @version      1.0
-// @description  派蒙的十万个为什么——自动答题
+// @version      1.1.2
+// @description  派蒙的十万个为什么自动答题，题库不是很全，能答一半多，但可以从用户的正确答案中获取，请兄弟们多用用，以后就不用自己答啦！
 // @author       0xCaner
 // @match        https://webstatic.mihoyo.com/ys/event/answer-question/index.html*
 // @icon         https://ys.mihoyo.com/main/favicon.ico
 // @grant        GM_xmlhttpRequest
+// @connect      81.68.147.136
 // ==/UserScript==
 var question;
 var main;
@@ -33,7 +34,7 @@ function a() {
 				onload: function(xhr) {
 					let answer = xhr.responseText;
 					console.log(answer);
-					if (typeof(answer) != "undefined") {
+					if (typeof(answer) != "undefined" && answer != "") {
 						for (let i = 1; i < a.length; i++) {
 							if (a[i].innerText.slice(3) == answer) {
 								a[i].click();
